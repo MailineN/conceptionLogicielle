@@ -6,11 +6,12 @@ def getNewDeckID(url):
     return(json["deck_id"])
 
 
-def DrawCards(nb_cartes):
+def DrawCards(deck_id,nb_cartes):
     
-    r = requests.get("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
-    deck = r.json()
-    deck_id = deck["deck_id"]
+    if deck_id == "" : 
+        r = requests.get("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
+        deck = r.json()
+        deck_id = deck["deck_id"]
 
     req = requests.get("https://deckofcardsapi.com/api/deck/"+deck_id+"/draw/?count="+str(nb_cartes))
     json = req.json()
