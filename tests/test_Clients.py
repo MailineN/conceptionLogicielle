@@ -15,3 +15,6 @@ class ClientTest(unittest.TestCase):
 
         self.assertEqual({'SPADES': 1, 'DIAMONDS': 1, 'CLUBS': 2, 'HEARTS': 1}, countCards(cards1))
         self.assertEqual({'SPADES': 0, 'DIAMONDS': 1, 'CLUBS': 2, 'HEARTS': 0}, countCards(card2))
+
+if __name__ == '__main__':
+    unittest.main()
