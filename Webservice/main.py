@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import http3
 from utils.functions import *
+from utils.tireCarteBaseModel import TireCarte
 
 app = FastAPI()
 
@@ -24,6 +25,6 @@ async def get_id():
     return {"deck_id" : r}
 
 @app.post("/cartes")
-def draw():
-    res = DrawCards(1)
+def draw(nb : TireCarte):
+    res = DrawCards(nb.nb_cartes)
     return(res)
