@@ -18,5 +18,5 @@ async def get_id():
 
 @app.post("/cartes")
 def draw(nb : TireCarte):
-    res = DrawCards(nb.nb_cartes)
+    res = DrawCards(nb.card_id,nb.nb_cartes)
     return(res)
