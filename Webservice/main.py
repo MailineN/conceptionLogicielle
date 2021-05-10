@@ -1,18 +1,10 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-import http3
 from utils.functions import *
 from utils.tireCarteBaseModel import TireCarte
 
 app = FastAPI()
 
-
-client = http3.AsyncClient()
-
-async def call_deck(url: str):
-
-    r = await client.get(url)
-    return r.text
 
 @app.get("/")
 async def root():
