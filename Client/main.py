@@ -10,13 +10,14 @@ print(deck["deck_id"])
 nbCarte = input("Combien de cartes voulez vous tirer ? (1 est pris en défault) ")
 
 try :
-    parameters = {"nb_cartes" : int(nbCarte)}
+    parameters = {"card_id": deck["deck_id"],"nb_cartes" : int(nbCarte)}
 except:
-    parameters = {"nb_cartes" : 1}
+    parameters = {"card_id": deck["deck_id"],"nb_cartes" : 1}
 
 req = requests.post(url+"/cartes", json=parameters)
 drawn = req.json()
 
 cards = drawn["cards"]
+print(cards)
 print(countCards(cards))
 
