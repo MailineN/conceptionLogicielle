@@ -16,5 +16,3 @@ def DrawCards(nb_cartes):
     json = req.json()
     res = {"deck_id": json["deck_id"], "cards": json["cards"]}
     return(res)
-
-    
