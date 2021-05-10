@@ -21,5 +21,5 @@ Des tests unitaires (enfin un test unitaire pour une unique fonction) ont étés
 Pour lancer ce test, on rentre depuis la racine : <br>
 ``` python3 -m unittest tests/test_Clients.py  ``` <br>
 
-
+### 🐼 Pour la fin 🐼
 ![alt text](https://raw.githubusercontent.com/MailineN/conceptionLogicielle/main/ImAPanda/panda.gif "Les pandas dominent le monde")
