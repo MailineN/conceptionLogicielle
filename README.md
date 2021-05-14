@@ -23,8 +23,10 @@ Pour lancer ce test, on rentre depuis la racine : <br>
 
 ### Automatisation des tests unitaires:
 Les tests peuvent être automatisés avec Github Actions, pour cela, il faut lancer un environnement virtuel au sein du projet: <br>
-On suppose que ```python3-venv``` est installé, sinon on lance la commande suivante sur ubuntu (Je ne sais pas pour windows désolée)
+On suppose que ```python3-venv``` est installé, sinon on lance la commande suivante sur ubuntu : <br> 
 ```sudo apt-get install python3-venv``` <br>
+(Je ne sais pas pour windows désolée)
+
 Pour lancer l'environnement virtuel on rentre depuis la racine : <br>
 ``` $python3 -m venv .env ``` <br>
 ``` $source .env/bin/activate ``` <br>
@@ -32,4 +34,4 @@ Et voilà!
 
 
 ### 🐼 Pour la fin 🐼
-![alt text](https://raw.githubusercontent.com/MailineN/conceptionLogicielle/main/ImAPanda/panda.gif "Les pandas dominent le monde")
+![alt text](https://raw.githubusercontent.com/MailineN/conceptionLogicielle/main/ImAPanda/pandaSpin.gif "Les pandas dominent le monde")
