@@ -1,11 +1,12 @@
 import requests 
 
+### Fonction de récupération de l'Id ###
 def getNewDeckID(url): 
     r = requests.get(url)
     json = r.json()
     return(json["deck_id"])
 
-
+### Fonction de tirage de cartes ###
 def DrawCards(deck_id,nb_cartes):
     
     if deck_id == "" : 
