@@ -12,6 +12,8 @@ print("Id du deck : " + deck["deck_id"])
 print("\n♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ \n")
 nbCarte = input("Combien de cartes voulez vous tirer ? (1 est pris en défault) ")
 
+if (int(nbCarte) > 52) :
+    print("Vous avez entré un nombre trop grand, le paquet entier va être tiré \n")
 try :
     parameters = {"card_id": deck["deck_id"],"nb_cartes" : int(nbCarte)}
 except:
@@ -20,15 +22,18 @@ except:
 req = requests.post(url+"/cartes", json=parameters)
 drawn = req.json()
 
-cards = drawn["cards"]
+try: 
+    cards = drawn["cards"]
 
-### Affichage des résultats ###
-print("List of cards : \n")
-for card in cards: 
-    print(card["value"]+" of "+ card["suit"])
-print("\n♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ \n")
-print("\nRésultats du comptage: \n")
-print(countCards(cards))
+    ### Affichage des résultats ###
+    print("List of cards : \n")
+    for card in cards: 
+        print(card["value"]+" of "+ card["suit"])
+    print("\n♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ \n")
+    print("\nRésultats du comptage: \n")
+    print(countCards(cards))
 
-print("\n♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ \n")
-print("\nBonne journée :) \n")
+    print("\n♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ \n")
+    print("\nBonne journée :) \n")
+except: 
+    print("Une erreur est survenue \n")

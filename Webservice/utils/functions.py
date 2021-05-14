@@ -19,5 +19,6 @@ def DrawCards(deck_id,nb_cartes):
         json = req.json()
         res = {"deck_id": json["deck_id"], "cards": json["cards"]}
         return(res)
+    # If error in json marche aussi pour détecter les erreurs
     else : 
         return {"deck_id": deck_id, "error": req.status_code}
