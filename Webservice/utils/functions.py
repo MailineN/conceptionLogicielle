@@ -14,6 +14,9 @@ def DrawCards(deck_id,nb_cartes):
         deck_id = deck["deck_id"]
 
     req = requests.get("https://deckofcardsapi.com/api/deck/"+deck_id+"/draw/?count="+str(nb_cartes))
-    json = req.json()
-    res = {"deck_id": json["deck_id"], "cards": json["cards"]}
-    return(res)
+    if (req.status_code == 200) or (req.status_code == 201):
+        json = req.json()
+        res = {"deck_id": json["deck_id"], "cards": json["cards"]}
+        return(res)
+    else : 
+        return {"deck_id": deck_id, "error": req.status_code}
