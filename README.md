@@ -32,4 +32,4 @@ Et voilà!
 
 
 ### 🐼 Pour la fin 🐼
-![alt text](https://raw.githubusercontent.com/MailineN/conceptionLogicielle/main/ImAPanda/panda.gif "Les pandas dominent le monde")
+![alt text](https://raw.githubusercontent.com/MailineN/conceptionLogicielle/main/ImAPanda/pandaSpin.gif "Les pandas dominent le monde")
