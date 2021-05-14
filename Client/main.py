@@ -1,6 +1,7 @@
 import requests 
 from utils.fonctions import countCards
 
+### Lancement du webservice et génération d'un deck ###
 url = "http://127.0.0.1:8000"
 req = requests.get(url+"/creer-un-deck/")
 deck = req.json()
