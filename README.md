@@ -1,4 +1,4 @@
-# 🍫🍫 Miam Miam le chocolat 🍫🍫
+# 🍫🍫 TP Conception Logiciel 🍫🍫
 On peut séparer ce rendu de TP en deux parties : <br>
 Les commandes pour lancer les différentes parties du TP doivent être exécutées depuis un terminal au choix de type terminal par défaut d'ubuntu, Alacritty (ou Powershell si après les 1000 heures de debug divers et variés du cours, vous n'avez pas compris que Windows c'est pas génial) <br>
 ### Partie webservice : 
